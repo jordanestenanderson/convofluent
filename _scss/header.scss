@@ -1,0 +1,29 @@
+header {
+  background: $neutral-900;
+  position:sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom:1px solid #3a3f47;
+  nav {
+    height: $space-xl;
+    .brand {
+      svg {
+        height: $space-md;
+        width: auto;
+      }
+    }
+    @include breakpoint-sm {
+      height: 60px;
+      .button-base {
+        padding: 8px 15px 10px 15px;
+      }
+      .brand svg {
+        height: 20px;
+      }
+    }
+  }
+  &.simple-header {
+    position:relative;
+    border-bottom: none;
+  }
+}

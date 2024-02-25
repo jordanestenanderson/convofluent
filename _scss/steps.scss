@@ -1,0 +1,154 @@
+.how-it-works {
+  border-radius: 0px;
+  padding: $space-2xl 0;
+  @include breakpoint-md {
+    padding: $space-xl 0;
+  }
+  h2 {
+    padding-bottom: $space-sm;
+    @include breakpoint-md {
+      padding-bottom: 0px;
+    }
+  }
+  .step-row {
+    grid-template-columns: 1fr 40px 1fr;
+    align-items: center;
+    @include breakpoint-md {
+      grid-template-columns: 1fr;
+      grid-gap: $space-xs;
+      text-align: center;
+      margin-top: $space-lg;
+    }
+    .step-graphic {
+      position: relative;
+      cursor: pointer;
+      @include breakpoint-md {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .expand-icon {
+        position: absolute;
+        bottom: $space-xs;
+        right: $space-xs;
+        border-radius: $border-radius-xl;
+        background: $neutral-900;
+        width: $space-lg;
+        height: $space-lg;
+        -webkit-transition: all 350ms ease-out;
+        -moz-transition: all 350ms ease-out;
+        -o-transition: all 350ms ease-out;
+        transition: all 350ms ease-out;
+        align-items: start;
+        overflow: hidden;
+        svg {
+          flex-shrink: 0;
+        }
+        p {
+          padding-bottom: $space-3xs;
+          margin-left: -$space-2xs;
+          padding-right: $space-xs;
+          opacity:0;
+          font-size: 14px;
+          -webkit-transition: all 350ms ease-out;
+          -moz-transition: all 350ms ease-out;
+          -o-transition: all 350ms ease-out;
+          transition: all 350ms ease-out;
+        }
+        @include breakpoint-md {
+          width: auto !important;
+          p {
+            opacity: $opacity-100;
+          }
+        }
+      }
+      &:hover {
+        .expand-icon {
+          width: 128px;
+        }
+        p {
+          opacity: $opacity-100;
+        }
+      }
+    }
+    .step-number {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top:16px;
+      margin-bottom:16px;
+      @include breakpoint-md {
+        padding-top: $space-2xs;
+        margin: 0;
+      }
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+      &:before, &:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: calc(50% - 20px);
+        background-color: #3a3f47;
+        margin: 0 auto;
+        @include breakpoint-md {
+          display: none;
+        }
+      }
+      &:before {
+        margin-bottom:16px;
+      }
+      &:after {
+        margin-top:16px;
+      }
+    }
+    &.step-final .step-number:after {
+      display: none;
+    }
+    .step-content {
+      h3 {
+        padding-top: $space-2xs;
+        @include breakpoint-md {
+          margin-top: 0px;
+          padding-top: 0px;
+        }
+      }
+      p {
+        margin-top: $space-2xs;
+      }
+      @include breakpoint-md {
+        max-width:600px;
+        margin: 0 auto;
+        p {
+          margin-bottom: $space-md;
+        }
+      }
+    }
+  }
+  .step-divider {
+    height: $space-2xl;
+    width: 100%;
+    &:after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: #3a3f47;
+      margin: 0 auto;
+    }
+    @include breakpoint-md {
+      display: none;
+    }
+  }
+  &.interior-how-it-works {
+    margin-top: 0px;
+    @include breakpoint-md {
+      margin-bottom: 0px;
+    }
+    .step-graphic-img {
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-lg;
+    }
+  }
+}
