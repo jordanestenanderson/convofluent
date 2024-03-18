@@ -1,12 +1,25 @@
 .features {
-	h2 {
+	background: $neutral-300;
+	.features-intro {
+		max-width:680px;
+		margin: 0 auto $space-xl auto;
+		padding-top: $space-xl;
 		justify-content: center;
-		margin-bottom: $space-xl;
+		text-align: center;
+		h2 {
+			max-width:540px;
+			margin: 0 auto;
+		}
+		@include breakpoint-md {
+		  	max-width:460px;
+		  	padding-top: $space-lg;
+		}
 	}
 	.fitted-background {
 		border-radius: 0px;
 	}
 	.grid {
+		padding-bottom: $space-xl;
 		.feature-card {
 			.feature-icon {
 				margin-top: -40px;

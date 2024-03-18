@@ -2,7 +2,7 @@
   .hero-content-container {
     max-width: 800px;
     margin: 0 auto;
-    padding: $space-xl 0 192px 0;
+    padding: $space-xl 0 $space-2xl 0;
     h1 {
       font-size: 4.25rem;
       span {
@@ -10,63 +10,6 @@
         .hero-text {
           position: relative;
           z-index: 1;
-        }
-        .title-star {
-          position: absolute;
-          top: -6px;
-          left: 56px;
-          width: 28px;
-          height: 29.06px;
-          @include breakpoint-md {
-            top: 2px;
-            left: 48px;
-            width: 20px;
-            height: 20.76px;
-          }
-          @include breakpoint-sm {
-            top: -1px;
-            left: 33px;
-            width: 14px;
-            height: 14.53px;
-          }
-        }
-        .title-tagline {
-          position: absolute;
-          top: 112px;
-          left: 26px;
-          width: 118px;
-          height: 82.57px;
-          @include breakpoint-md {
-            top: 96px;
-            left: 20px;
-            width: 100px;
-            height: 69.98px;
-          }
-          @include breakpoint-sm {
-            top: 82px;
-            left: -2px;
-            width: 76px;
-            height: 53.18px;
-          }
-        }
-        .title-underline {
-          position: absolute;
-          bottom: -20px;
-          right: -28px;
-          width: 256px;
-          height: 27.04px;
-          @include breakpoint-md {
-            bottom: -20px;
-            right: -32px;
-            width: 220px;
-            height: 23.23px;
-          }
-          @include breakpoint-sm {
-            bottom: -12px;
-            right: -14px;
-            width: 140px;
-            height: 14.79px;
-          }
         }
       }
     }
@@ -82,12 +25,8 @@
     .button-lg {
       margin-top: $space-2xs;
     }
-    .action-tagline {
-      font-size: 15px;
-    }
     @include breakpoint-md {
-      padding-top: $space-md;
-      padding: $space-md 0 $space-3xl 0;
+      padding: $space-md 0 $space-lg 0;
       h1 {
         font-size: 3.5rem;
       }
@@ -98,9 +37,32 @@
       }
     }
   }
-  &.interior-header {
-    .hero-content-container {
-      padding: $space-lg 0 $space-lg 0;
+}
+.graphics {
+  position: relative;
+  .graphics-background {
+    background: $neutral-300;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .hero-graphic-container {
+    .hero-graphic-image {
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-lg;
+      position: relative;
+      z-index: 1;
+
+    }
+    @include breakpoint-md {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: $space-xs;
+      .hero-graphic-image:last-child {
+        display: none;
+      }
     }
   }
 }

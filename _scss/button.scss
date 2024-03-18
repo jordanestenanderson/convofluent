@@ -3,14 +3,14 @@
   padding: 11px $space-sm 13px $space-sm;
   @include breakpoint-sm {
     font-size: $text-base;
-    padding: 10px $space-xs 10px $space-xs;
+    padding: 12px $space-xs 12px $space-xs;
   }
 }
 .button-base {
   font-size: $text-base;
   padding: 10px $space-sm 10px $space-sm;
   @include breakpoint-sm {
-    padding: 10px $space-xs 10px $space-xs;
+    padding: 12px $space-xs 12px $space-xs;
   }
 }
 .button-sm {
@@ -43,7 +43,7 @@
     left: 0;
     top: 0;
     position: absolute;
-    background: $purple;
+    background: $blue;
     border-radius: $border-radius-xl;
     opacity: $opacity-0;
     @include transition(350ms);
